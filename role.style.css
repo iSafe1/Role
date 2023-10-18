@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --x: 45deg;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0e1538;
+
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px; /* Adjust the margin as needed */
+}
+
+.welcome-text {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.button-list {
+    list-style: none; /* Remove dots beside the buttons */
+    padding: 0;
+}
+
+.button-list li {
+    margin-bottom: 10px;
+}
+
+a, .button-list a {
+    position: relative;
+    width: 150px;
+    height: 55px;
+    display: inline-block;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+a i, .button-list a i {
+    position: absolute;
+    inset: -2px;
+    display: block;
+    border-radius: 5px;
+}
+
+a i, a i:nth-child(2), .button-list a i, .button-list a i:nth-child(2) {
+    background: linear-gradient(var(--x), #00ccff, #0e1538, #0e1538, #d400d4);
+}
+
+a i:nth-child(2), .button-list a i:nth-child(2) {
+    filter: blur(10px);
+}
+
+a span, .button-list a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+    border: 1px solid #040a29;
+    border-radius: 3px;
+    background: rgba(14, 21, 56, 0.65);
+    overflow: hidden;
+    transition: background 0.3s ease;
+}
+
+a:hover span, .button-list a:hover span {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+a span::before, .button-list a span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.075);
+    transform: skewX(25deg);
+}
+
+
+
+
